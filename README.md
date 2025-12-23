@@ -43,14 +43,14 @@ cd o1-adapter
 
 Update configuration before building as this is common for deployment methods — **docker**, **source**, or **Makefile**.
 
-### For docker or source-based builds:
+### For docker, source and makefile-based builds:
 
 Modify `docker/config/config.json`:
 
 1. Set host IP address (`host` under `network` section) and telnet server IP address (`host` under `telnet` section) to host IP.
 2. Update the `ves.url` parameter to `http://<HOST_IP>:<VES_SVC_PORT>/eventListener/v7` to connect with the SMO VES Collector.
 
-### For Makefile-based builds:
+### For Makefile-based builds only:
 
 1. Update the `integration/.env` file as the values got further propagated to `integration/config/config.json`.
 
